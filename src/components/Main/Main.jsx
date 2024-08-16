@@ -1,8 +1,9 @@
 import React from 'react'
 import Column from './Column'
-// import { cardList } from '../data'
+import * as H from '../Header/Header.styled'
+import * as M from './Main.styled'
 
-function Main({cards}) {
+function Main({ cards }) {
   console.log(cards)
   const statusList = [
     'Без статуса',
@@ -14,23 +15,21 @@ function Main({cards}) {
 
   return (
     <>
-      <main className="main">
-        <div className="container">
-          <div className="main__block">
-            <div className="main__content">
+      <M.Main>
+        <H.Container>
+          <M.Main_block>
+            <M.Main__content>
               {statusList.map((status) => (
                 <Column
                   key={status}
                   title={status}
-                  cardList={cards.filter(
-                    (card) => card.status === status,
-                  )}
+                  cardList={cards.filter((card) => card.status === status)}
                 />
               ))}
-            </div>
-          </div>
-        </div>
-      </main>
+            </M.Main__content>
+          </M.Main_block>
+        </H.Container>
+      </M.Main>
     </>
   )
 }

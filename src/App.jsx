@@ -1,6 +1,6 @@
 import './App.css'
 import Header from './components/Header/Header'
-import Main from './components/Main'
+import Main from './components/Main/Main'
 import PopBrowse from './components/PopBrowse'
 import PopExit from './components/PopExit'
 import PopNewCard from './components/PopNewCard'
@@ -11,6 +11,8 @@ function App() {
   console.log(cardList)
   const [cards, setCards] = useState(cardList)
   const [isLoading, setIsLoading] = useState(false)
+  const [isDarkTheme, setIsDarkTheme] = useState(false);
+
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(true)
@@ -29,6 +31,8 @@ function App() {
     setCards([newCard, ...cards]) // Добавляем новую карточку в начало списка
   }
 
+
+
   return (
     <>
       <div className="wrapper">
@@ -37,10 +41,7 @@ function App() {
         <PopExit />
         <PopBrowse />
         <Header handleCardAdd={handleCardAdd} />
-        {isLoading ? (
-          <Main cards={cards} /> 
-        ) : (
-          <div>Идёт загрузка...</div>)}
+        {isLoading ? <Main cards={cards} /> : <div>Идёт загрузка...</div>}
       </div>
     </>
   )

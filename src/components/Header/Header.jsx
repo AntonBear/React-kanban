@@ -1,6 +1,5 @@
 import React from 'react'
 import UserSetTarget from './UserSetTarget'
-import { Button } from '../Button/Button.styled'
 import * as S from './Header.styled'
 
 function Header({ handleCardAdd }) {
@@ -8,7 +7,7 @@ function Header({ handleCardAdd }) {
     <>
       <S.Header>
         <S.Container>
-          <div className="header__block">
+          <S.Header__block>
             <div className="header__logo _show _light">
               <a href="" target="_self">
                 <img src="images/logo.png" alt="logo" />
@@ -19,14 +18,13 @@ function Header({ handleCardAdd }) {
                 <img src="images/logo_dark.png" alt="logo" />
               </a>
             </div>
-            <nav className="header__nav">
-              <Button onClick={handleCardAdd}>
+            <S.Header__nav>
+              <S.Button onClick={handleCardAdd}>
                 <a href="#popNewCard"> Создать новую задачу</a>
-              </Button>
-
+              </S.Button>
               <UserSetTarget />
-            </nav>
-          </div>
+            </S.Header__nav>
+          </S.Header__block>
         </S.Container>
       </S.Header>
     </>
