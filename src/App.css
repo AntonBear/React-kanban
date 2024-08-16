@@ -721,11 +721,11 @@ body {
   display: none;
 }
 
-.header {
+/* .header {
   width: 100%;
   margin: 0 auto;
   background-color: #ffffff;
-}
+} */
 .header__block {
   height: 70px;
   display: flex;
@@ -747,7 +747,7 @@ body {
   align-items: center;
   justify-content: center;
 }
-.header__btn-main-new {
+/* .header__btn-main-new {
   width: 178px;
   height: 30px;
   border-radius: 4px;
@@ -761,7 +761,7 @@ body {
 }
 .header__btn-main-new a {
   color: #ffffff;
-}
+} */
 .header__user {
   height: 20px;
   display: flex;

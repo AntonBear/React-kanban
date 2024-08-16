@@ -1,11 +1,13 @@
 import React from 'react'
 import UserSetTarget from './UserSetTarget'
+import { Button } from '../Button/Button.styled'
+import * as S from './Header.styled'
 
 function Header({ handleCardAdd }) {
   return (
     <>
-      <header className="header">
-        <div className="container">
+      <S.Header>
+        <S.Container>
           <div className="header__block">
             <div className="header__logo _show _light">
               <a href="" target="_self">
@@ -18,19 +20,15 @@ function Header({ handleCardAdd }) {
               </a>
             </div>
             <nav className="header__nav">
-              <button
-                onClick={handleCardAdd}
-                className="header__btn-main-new _hover01"
-                id="btnMainNew"
-              >
+              <Button onClick={handleCardAdd}>
                 <a href="#popNewCard"> Создать новую задачу</a>
-              </button>
+              </Button>
 
               <UserSetTarget />
             </nav>
           </div>
-        </div>
-      </header>
+        </S.Container>
+      </S.Header>
     </>
   )
 }
