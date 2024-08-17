@@ -2,7 +2,7 @@ import React from 'react'
 import UserSetTarget from './UserSetTarget'
 import * as S from './Header.styled'
 
-function Header({ handleCardAdd }) {
+function Header({ handleCardAdd, toggleTheme, theme }) {
   return (
     <>
       <S.Header>
@@ -22,7 +22,7 @@ function Header({ handleCardAdd }) {
               <S.Button onClick={handleCardAdd}>
                 <a href="#popNewCard"> Создать новую задачу</a>
               </S.Button>
-              <UserSetTarget />
+              <UserSetTarget toggleTheme={toggleTheme} theme={theme}  />
             </S.Header__nav>
           </S.Header__block>
         </S.Container>

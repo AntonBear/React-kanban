@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-function UserSetTarget() {
+function UserSetTarget({ toggleTheme, theme }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
   const toggleModal = () => {
     setIsModalOpen(!isModalOpen)
@@ -27,8 +27,8 @@ function UserSetTarget() {
               type="checkbox"
               className="checkbox"
               name="checkbox"
-              // checked={isChecked}
-              // onChange={handleChange} 
+              checked={theme}
+              onChange={toggleTheme}
             />
           </div>
           <button type="button" className="_hover03">

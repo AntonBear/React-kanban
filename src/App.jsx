@@ -11,7 +11,6 @@ function App() {
   console.log(cardList)
   const [cards, setCards] = useState(cardList)
   const [isLoading, setIsLoading] = useState(false)
-  const [isDarkTheme, setIsDarkTheme] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
@@ -31,18 +30,29 @@ function App() {
     setCards([newCard, ...cards]) // Добавляем новую карточку в начало списка
   }
 
+  const [theme, setTheme] = useState('light') // Состояние для переключения тем
 
+  // Функция для переключения темы
+  const toggleTheme = () => {
+    if (theme === 'light') {
+      setTheme('dark')
+    } else {
+      setTheme('light')
+    }
+  }
 
   return (
     <>
-      <div className="wrapper">
-        <PopExit />
-        <PopNewCard />
-        <PopExit />
-        <PopBrowse />
-        <Header handleCardAdd={handleCardAdd} />
-        {isLoading ? <Main cards={cards} /> : <div>Идёт загрузка...</div>}
-      </div>
+      {/* <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}> */}
+        <div className="wrapper">
+          <PopExit />
+          <PopNewCard />
+          <PopExit />
+          <PopBrowse />
+          <Header theme={theme} toggleTheme={toggleTheme} handleCardAdd={handleCardAdd} />
+          {isLoading ? <Main cards={cards} /> : <div>Идёт загрузка...</div>}
+        </div>
+      {/* </ThemeProvider> */}
     </>
   )
 }
