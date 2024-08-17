@@ -6,6 +6,8 @@ import PopExit from './components/PopExit'
 import PopNewCard from './components/PopNewCard'
 import { cardList } from './data'
 import { useState, useEffect } from 'react'
+import { lightTheme, darkTheme } from './ThemeProvider.styled'
+import { ThemeProvider } from 'styled-components'
 
 function App() {
   console.log(cardList)
@@ -43,16 +45,20 @@ function App() {
 
   return (
     <>
-      {/* <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}> */}
+      <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <div className="wrapper">
           <PopExit />
           <PopNewCard />
           <PopExit />
           <PopBrowse />
-          <Header theme={theme} toggleTheme={toggleTheme} handleCardAdd={handleCardAdd} />
+          <Header
+            theme={theme}
+            toggleTheme={toggleTheme}
+            handleCardAdd={handleCardAdd}
+          />
           {isLoading ? <Main cards={cards} /> : <div>Идёт загрузка...</div>}
         </div>
-      {/* </ThemeProvider> */}
+      </ThemeProvider>
     </>
   )
 }

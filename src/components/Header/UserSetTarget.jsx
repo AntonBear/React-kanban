@@ -27,7 +27,7 @@ function UserSetTarget({ toggleTheme, theme }) {
               type="checkbox"
               className="checkbox"
               name="checkbox"
-              checked={theme}
+              // checked={!theme}
               onChange={toggleTheme}
             />
           </div>

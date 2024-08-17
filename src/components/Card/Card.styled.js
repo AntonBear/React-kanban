@@ -19,7 +19,7 @@ export const Cards__item = styled.div`
 export const Cards__card = styled.div`
   width: 220px;
   height: 130px;
-  background-color: #ffffff;
+  background-color: ${(props) => props.theme.card.backgroundColor};
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -91,6 +91,6 @@ export const Card__title = styled.h3`
   font-size: 14px;
   font-weight: 500;
   line-height: 18px;
-  color: #000000;
+  color: ${(props) => props.theme.card.color};
   margin-bottom: 10px;
 `
