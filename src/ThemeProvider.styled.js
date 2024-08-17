@@ -9,6 +9,7 @@ export const lightTheme = {
     color: '#000000',
   },
   header: { backgroundColor: '#ffffff', color: '#565eef' },
+  pop_user: { color: '#565EEF' },
   wrapper: { backgroundColor: '#f1f1f1' },
   main: { backgroundColor: '#eaeef6' },
 }
@@ -40,6 +41,7 @@ export const darkTheme = {
     },
   },
   header: { backgroundColor: '#20202C', color: '#ffffff' },
+  pop_user: { color: '#ffffff' },
   wrapper: { backgroundColor: '#151419' },
   main: { backgroundColor: '#151419' },
 }

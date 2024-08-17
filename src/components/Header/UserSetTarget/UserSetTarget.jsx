@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import * as U from './UsetSetTarget.styled'
 
 function UserSetTarget({ toggleTheme, theme }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -9,16 +10,13 @@ function UserSetTarget({ toggleTheme, theme }) {
 
   return (
     <>
-      <a
-        href="#user-set-target"
-        className="header__user _hover02"
-        onClick={toggleModal}
-      >
+      <U.pop_user href="#user-set-target" onClick={toggleModal}>
         Ivan Ivanov
-      </a>
+      </U.pop_user>
       {isModalOpen && (
         <div className="header__pop-user-set pop-user-set" id="user-set-target">
           <a href="">x</a>
+
           <p className="pop-user-set__name">Ivan Ivanov</p>
           <p className="pop-user-set__mail">ivan.ivanov@gmail.com</p>
           <div className="pop-user-set__theme">

@@ -62,11 +62,11 @@ body {
   background-color: #33399b;
 }
 
-._hover02:hover,
+/* ._hover02:hover, */
 .header__user:hover {
   color: #33399b;
 }
-._hover02:hover::after,
+/* ._hover02:hover::after, */
 .header__user:hover::after {
   border-left-color: #33399b;
   border-bottom-color: #33399b;
@@ -764,7 +764,7 @@ body {
 .header__btn-main-new a {
   color: #ffffff;
 } */
-.header__user {
+/* .header__user {
   height: 20px;
   display: flex;
   flex-wrap: nowrap;
@@ -773,7 +773,7 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: #565eef;
-}
+} */
 .header__user::after {
   content: '';
   display: block;
