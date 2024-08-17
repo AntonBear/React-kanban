@@ -2,7 +2,7 @@ import React from 'react'
 import Card from '../Card/Card'
 import * as C from './Column.styled'
 
-function Column({ title, cardList }) {
+function Column({ title, cardList, theme }) {
   return (
     <C.Main__column>
       <C.Column__title>
@@ -11,6 +11,7 @@ function Column({ title, cardList }) {
       <C.Cards>
         {cardList.map((card) => (
           <Card
+            themeofsite={theme}
             key={card.id}
             id={card.id}
             title={card.title}

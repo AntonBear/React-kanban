@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { darkTheme } from '../../ThemeProvider.styled.js'
 
 export const topicStyles = {
   _purple: {
@@ -19,16 +20,30 @@ export const topicStyles = {
   },
 }
 
+export const textTheme = styled.p`
+  color: ${({ $themeColor, $themeofsite }) => {
+    console.log($themeofsite)
+    const colorFromTopic = topicStyles[$themeColor]?.color // Получаем цвет из topicStyles
+    const colorFromTheme =
+      $themeofsite == 'dark' ? darkTheme.card.p[$themeColor].color : false // Цвет из темы, если она темная
+    return colorFromTheme || colorFromTopic // Возвращаем первый найденный цвет или дефолтный
+  }};
+`
+
 export const Card__theme = styled.div`
   width: auto;
   height: 20px;
   padding: 5px 14px;
   border-radius: 18px;
-  background-color: ${({ $themeColor }) =>
-    topicStyles[$themeColor]?.backgroundColor || '#b4fdd1'};
-
-  /* #ffe4c2; */
-  color: #ff6d00;
+  background-color: ${({ $themeColor, $themeofsite }) => {
+    const colorCard__theme =
+      topicStyles[$themeColor]?.backgroundColor || '#b4fdd1'
+    const colorFromTheme =
+      $themeofsite == 'dark'
+        ? darkTheme.card.p[$themeColor].backgroundColor
+        : false
+    return colorFromTheme || colorCard__theme
+  }};
 
   p {
     font-size: 10px;
@@ -115,4 +130,3 @@ export const Card__title = styled.h3`
   color: ${(props) => props.theme.card.color};
   margin-bottom: 10px;
 `
-

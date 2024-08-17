@@ -1,10 +1,7 @@
 import React from 'react'
 import * as C from './Card.styled.js'
 
-function Card({ id, title, theme, date }) {
-  console.log(theme)
-  console.log(typeof theme)
-  console.log(theme == 'Web Design')
+function Card({ title, theme, date, themeofsite }) {
   let themeColor
   switch (theme) {
     case 'Web Design':
@@ -19,13 +16,16 @@ function Card({ id, title, theme, date }) {
     default:
       themeColor = '_green'
   }
+  console.log(themeofsite)
 
   return (
     <C.Cards__item>
       <C.Cards__card>
         <C.Card__group>
-          <C.Card__theme $themeColor={themeColor}>
-            <p>{theme}</p>
+          <C.Card__theme $themeColor={themeColor} $themeofsite={themeofsite}>
+            <C.textTheme $themeColor={themeColor} $themeofsite={themeofsite}>
+              {theme}
+            </C.textTheme>
           </C.Card__theme>
           <a href="#popBrowse" target="_self">
             <C.Card__btn>

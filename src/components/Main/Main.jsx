@@ -3,7 +3,7 @@ import Column from './Column'
 import * as H from '../Header/Header.styled'
 import * as M from './Main.styled'
 
-function Main({ cards }) {
+function Main({ cards, theme }) {
   console.log(cards)
   const statusList = [
     'Без статуса',
@@ -21,6 +21,7 @@ function Main({ cards }) {
             <M.Main__content>
               {statusList.map((status) => (
                 <Column
+                  theme={theme}
                   key={status}
                   title={status}
                   cardList={cards.filter((card) => card.status === status)}

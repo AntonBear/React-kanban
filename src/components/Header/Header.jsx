@@ -1,5 +1,5 @@
 import React from 'react'
-import UserSetTarget from './UserSetTarget'
+import UserSetTarget from './UserSetTarget/UserSetTarget'
 import * as S from './Header.styled'
 
 function Header({ handleCardAdd, toggleTheme, theme }) {

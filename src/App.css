@@ -43,13 +43,13 @@ body {
   color: #000000;
 }
 
-.wrapper {
+/* .wrapper {
   max-width: 100%;
   width: 100vw;
   min-height: 100vh;
   overflow: hidden;
   background-color: #f1f1f1;
-}
+} */
 
 /* .container {
   max-width: 1260px;
@@ -87,7 +87,7 @@ body {
   display: block;
 }
 
-._orange {
+/* ._orange {
   background-color: #ffe4c2;
   color: #ff6d00;
 }
@@ -105,7 +105,7 @@ body {
 ._gray {
   background: #94a6be;
   color: #ffffff;
-}
+} */
 
 ._active-category {
   opacity: 1 !important;

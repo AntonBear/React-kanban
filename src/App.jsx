@@ -57,7 +57,7 @@ function App() {
             toggleTheme={toggleTheme}
             handleCardAdd={handleCardAdd}
           />
-          {isLoading ? <Main cards={cards} /> : <div>Идёт загрузка...</div>}
+          {isLoading ? <Main cards={cards} theme={theme}/> : <div>Идёт загрузка...</div>}
         </Wrapper>
       </ThemeProvider>
     </>

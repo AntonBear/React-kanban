@@ -1,3 +1,5 @@
+// import topicStyles from './components/Card/Card.styled'
+
 export const lightTheme = {
   body: '#FFF',
   text: '#363537',
@@ -18,6 +20,24 @@ export const darkTheme = {
   card: {
     backgroundColor: '#20202C',
     color: '#ffffff',
+    p: {
+      _purple: {
+        backgroundColor: '#9A48F1',
+        color: '#E9D4FF',
+      },
+      _orange: {
+        backgroundColor: '#FF6D00',
+        color: '#FFE4C2',
+      },
+      _green: {
+        backgroundColor: '#06B16E',
+        color: '#B4FDD1',
+      },
+      _gray: {
+        backgroundColor: '#94a6be',
+        color: '#ffffff',
+      },
+    },
   },
   header: { backgroundColor: '#20202C', color: '#ffffff' },
   wrapper: { backgroundColor: '#151419' },
