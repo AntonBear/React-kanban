@@ -4,6 +4,7 @@ import Main from './components/Main/Main'
 import PopBrowse from './components/PopBrowse'
 import PopExit from './components/PopExit'
 import PopNewCard from './components/PopNewCard'
+import  Wrapper from './components/Wrapper/Wrapper'
 import { cardList } from './data'
 import { useState, useEffect } from 'react'
 import { lightTheme, darkTheme } from './ThemeProvider.styled'
@@ -46,7 +47,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
-        <div className="wrapper">
+        <Wrapper>
           <PopExit />
           <PopNewCard />
           <PopExit />
@@ -57,7 +58,7 @@ function App() {
             handleCardAdd={handleCardAdd}
           />
           {isLoading ? <Main cards={cards} /> : <div>Идёт загрузка...</div>}
-        </div>
+        </Wrapper>
       </ThemeProvider>
     </>
   )

@@ -1,7 +1,5 @@
 import styled from 'styled-components'
 
-
-
 export const Button = styled.button`
   width: 178px;
   height: 30px;
@@ -23,11 +21,10 @@ export const Button = styled.button`
   }
 `
 
-
 export const Header = styled.header`
   width: 100%;
   margin: 0 auto;
-  background-color: #ffffff;
+  background-color: ${(props) => props.theme.header.backgroundColor};
 `
 export const Container = styled.header`
   max-width: 1260px;
@@ -54,5 +51,3 @@ export const Header__nav = styled.nav`
   align-items: center;
   justify-content: center;
 `
-
-

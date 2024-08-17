@@ -8,14 +8,14 @@ export const cardList = [
   },
   {
     id: 2,
-    theme: 'Web Design',
+    theme: 'Copywriting',
     title: 'Название задачи',
     date: '30.12.23',
     status: 'Без статуса',
   },
   {
     id: 3,
-    theme: 'Разработка',
+    theme: 'Research',
     title: 'Задача 3',
     date: '29.12.23',
     status: 'Готово', // <-- Ещё один статус
