@@ -1,12 +1,13 @@
 import React from 'react'
-import UserSetTarget from './UserSetTarget'
+import UserSetTarget from './UserSetTarget/UserSetTarget'
+import * as S from './Header.styled'
 
-function Header({ handleCardAdd }) {
+function Header({ handleCardAdd, toggleTheme, theme }) {
   return (
     <>
-      <header className="header">
-        <div className="container">
-          <div className="header__block">
+      <S.Header>
+        <S.Container>
+          <S.Header__block>
             <div className="header__logo _show _light">
               <a href="" target="_self">
                 <img src="images/logo.png" alt="logo" />
@@ -17,20 +18,15 @@ function Header({ handleCardAdd }) {
                 <img src="images/logo_dark.png" alt="logo" />
               </a>
             </div>
-            <nav className="header__nav">
-              <button
-                onClick={handleCardAdd}
-                className="header__btn-main-new _hover01"
-                id="btnMainNew"
-              >
+            <S.Header__nav>
+              <S.Button onClick={handleCardAdd}>
                 <a href="#popNewCard"> Создать новую задачу</a>
-              </button>
-
-              <UserSetTarget />
-            </nav>
-          </div>
-        </div>
-      </header>
+              </S.Button>
+              <UserSetTarget toggleTheme={toggleTheme} theme={theme}  />
+            </S.Header__nav>
+          </S.Header__block>
+        </S.Container>
+      </S.Header>
     </>
   )
 }

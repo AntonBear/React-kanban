@@ -1,15 +1,17 @@
 import React from 'react'
-import Card from './Card'
+import Card from '../Card/Card'
+import * as C from './Column.styled'
 
-function Column({ title, cardList }) {
+function Column({ title, cardList, theme }) {
   return (
-    <div className="main__column">
-      <div className="column__title">
+    <C.Main__column>
+      <C.Column__title>
         <p>{title}</p>
-      </div>
-      <div className="cards">
+      </C.Column__title>
+      <C.Cards>
         {cardList.map((card) => (
           <Card
+            themeofsite={theme}
             key={card.id}
             id={card.id}
             title={card.title}
@@ -17,8 +19,8 @@ function Column({ title, cardList }) {
             date={card.date}
           />
         ))}
-      </div>
-    </div>
+      </C.Cards>
+    </C.Main__column>
   )
 }
 
