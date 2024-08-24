@@ -1,14 +1,14 @@
 import React from 'react'
 import Card from '../Card/Card'
-import * as C from './Column.styled'
+import { Main__column, Column__title, Cards } from './Column.styled'
 
 function Column({ title, cardList, theme }) {
   return (
-    <C.Main__column>
-      <C.Column__title>
+    <Main__column>
+      <Column__title>
         <p>{title}</p>
-      </C.Column__title>
-      <C.Cards>
+      </Column__title>
+      <Cards>
         {cardList.map((card) => (
           <Card
             themeofsite={theme}
@@ -19,8 +19,8 @@ function Column({ title, cardList, theme }) {
             date={card.date}
           />
         ))}
-      </C.Cards>
-    </C.Main__column>
+      </Cards>
+    </Main__column>
   )
 }
 

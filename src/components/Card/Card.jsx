@@ -1,5 +1,17 @@
 import React from 'react'
-import * as C from './Card.styled.js'
+// import * as C from './Card.styled.js'
+import {
+  Card__btn,
+  Card__content,
+  Card__date,
+  Card__group,
+  Card__theme,
+  Card__title,
+  Cards__card,
+  Cards__item,
+  Text_theme,
+  StyledSvg,
+} from './Card.styled.js'
 
 function Card({ title, theme, date, themeofsite }) {
   let themeColor
@@ -19,28 +31,28 @@ function Card({ title, theme, date, themeofsite }) {
   console.log(themeofsite)
 
   return (
-    <C.Cards__item>
-      <C.Cards__card>
-        <C.Card__group>
-          <C.Card__theme $themeColor={themeColor} $themeofsite={themeofsite}>
-            <C.textTheme $themeColor={themeColor} $themeofsite={themeofsite}>
+    <Cards__item>
+      <Cards__card>
+        <Card__group>
+          <Card__theme $themeColor={themeColor} $themeofsite={themeofsite}>
+            <Text_theme $themeColor={themeColor} $themeofsite={themeofsite}>
               {theme}
-            </C.textTheme>
-          </C.Card__theme>
+            </Text_theme>
+          </Card__theme>
           <a href="#popBrowse" target="_self">
-            <C.Card__btn>
+            <Card__btn>
               <div></div>
               <div></div>
               <div></div>
-            </C.Card__btn>
+            </Card__btn>
           </a>
-        </C.Card__group>
-        <C.Card__content>
+        </Card__group>
+        <Card__content>
           <a href="" target="_blank">
-            <C.Card__title>{title}</C.Card__title>
+            <Card__title>{title}</Card__title>
           </a>
-          <C.Card__date>
-            <C.StyledSvg>
+          <Card__date>
+            <StyledSvg>
               <g clipPath="url(#clip0_1_415)">
                 <path
                   d="M10.5625 2.03125H2.4375C1.7644 2.03125 1.21875 2.5769 1.21875 3.25V10.5625C1.21875 11.2356 1.7644 11.7812 2.4375 11.7812H10.5625C11.2356 11.7812 11.7812 11.2356 11.7812 10.5625V3.25C11.7812 2.5769 11.2356 2.03125 10.5625 2.03125Z"
@@ -61,12 +73,12 @@ function Card({ title, theme, date, themeofsite }) {
                   <rect width="13" height="13" fill="white" />
                 </clipPath>
               </defs>
-            </C.StyledSvg>
+            </StyledSvg>
             <p>{date}</p>
-          </C.Card__date>
-        </C.Card__content>
-      </C.Cards__card>
-    </C.Cards__item>
+          </Card__date>
+        </Card__content>
+      </Cards__card>
+    </Cards__item>
   )
 }
 

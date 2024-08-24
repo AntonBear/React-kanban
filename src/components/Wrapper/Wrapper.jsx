@@ -1,8 +1,8 @@
 import React from 'react'
-import * as W from './Wrapper.styled.js'
+import { Wrapper_content } from './Wrapper.styled.js'
 
 function Wrapper({ children }) {
-  return <W.Wrapper>{children}</W.Wrapper>
+  return <Wrapper_content>{children}</Wrapper_content>
 }
 
 export default Wrapper

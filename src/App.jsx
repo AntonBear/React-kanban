@@ -4,11 +4,12 @@ import Main from './components/Main/Main'
 import PopBrowse from './components/PopBrowse'
 import PopExit from './components/PopExit'
 import PopNewCard from './components/PopNewCard'
-import  Wrapper from './components/Wrapper/Wrapper'
+import Wrapper from './components/Wrapper/Wrapper'
 import { cardList } from './data'
 import { useState, useEffect } from 'react'
 import { lightTheme, darkTheme } from './ThemeProvider.styled'
 import { ThemeProvider } from 'styled-components'
+import { Routes, Route } from 'react-router-dom'
 
 function App() {
   console.log(cardList)
@@ -57,7 +58,11 @@ function App() {
             toggleTheme={toggleTheme}
             handleCardAdd={handleCardAdd}
           />
-          {isLoading ? <Main cards={cards} theme={theme}/> : <div>Идёт загрузка...</div>}
+          {isLoading ? (
+            <Main cards={cards} theme={theme} />
+          ) : (
+            <div>Идёт загрузка...</div>
+          )}
         </Wrapper>
       </ThemeProvider>
     </>

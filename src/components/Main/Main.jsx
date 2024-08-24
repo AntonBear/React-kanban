@@ -1,7 +1,7 @@
 import React from 'react'
 import Column from './Column'
-import * as H from '../Header/Header.styled'
-import * as M from './Main.styled'
+import { Container } from '../Header/Header.styled'
+import { Main_container, Main__content, Main_block } from './Main.styled'
 
 function Main({ cards, theme }) {
   console.log(cards)
@@ -15,10 +15,10 @@ function Main({ cards, theme }) {
 
   return (
     <>
-      <M.Main>
-        <H.Container>
-          <M.Main_block>
-            <M.Main__content>
+      <Main_container>
+        <Container>
+          <Main_block>
+            <Main__content>
               {statusList.map((status) => (
                 <Column
                   theme={theme}
@@ -27,10 +27,10 @@ function Main({ cards, theme }) {
                   cardList={cards.filter((card) => card.status === status)}
                 />
               ))}
-            </M.Main__content>
-          </M.Main_block>
-        </H.Container>
-      </M.Main>
+            </Main__content>
+          </Main_block>
+        </Container>
+      </Main_container>
     </>
   )
 }

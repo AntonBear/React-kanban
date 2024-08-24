@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
 
-export const Main = styled.main`
+export const Main_container = styled.main`
   width: 100%;
   background-color: ${(props) => props.theme.main.backgroundColor};
 `

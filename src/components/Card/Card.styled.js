@@ -20,7 +20,7 @@ export const topicStyles = {
   },
 }
 
-export const textTheme = styled.p`
+export const Text_theme = styled.p`
   color: ${({ $themeColor, $themeofsite }) => {
     console.log($themeofsite)
     const colorFromTopic = topicStyles[$themeColor]?.color // Получаем цвет из topicStyles
