@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import * as U from './UsetSetTarget.styled'
+import { Link } from 'react-router-dom'
 
 function UserSetTarget({ toggleTheme, theme }) {
   const [isModalOpen, setIsModalOpen] = useState(false)
@@ -29,7 +30,8 @@ function UserSetTarget({ toggleTheme, theme }) {
             />
           </div>
           <button type="button" className="_hover03">
-            <a href="#popExit">Выйти</a>
+            <Link to="/exit">Выйти</Link>
+            {/* <a href="#popExit">Выйти</a> */}
           </button>
         </div>
       )}

@@ -21,7 +21,7 @@ export const Button = styled.button`
   }
 `
 
-export const Header = styled.header`
+export const Header_wrapper = styled.header`
   width: 100%;
   margin: 0 auto;
   background-color: ${(props) => props.theme.header.backgroundColor};
