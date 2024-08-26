@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const pop_user = styled.a`
+export const Pop_user = styled.a`
   height: 20px;
   display: flex;
   flex-wrap: nowrap;

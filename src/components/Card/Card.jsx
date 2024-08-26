@@ -1,5 +1,4 @@
 import React from 'react'
-// import * as C from './Card.styled.js'
 import {
   Card__btn,
   Card__content,
@@ -12,6 +11,7 @@ import {
   Text_theme,
   StyledSvg,
 } from './Card.styled.js'
+import { Link } from 'react-router-dom'
 
 function Card({ title, theme, date, themeofsite }) {
   let themeColor
@@ -39,13 +39,13 @@ function Card({ title, theme, date, themeofsite }) {
               {theme}
             </Text_theme>
           </Card__theme>
-          <a href="#popBrowse" target="_self">
+          <Link to="/pop-browse">
             <Card__btn>
               <div></div>
               <div></div>
               <div></div>
             </Card__btn>
-          </a>
+          </Link>
         </Card__group>
         <Card__content>
           <a href="" target="_blank">

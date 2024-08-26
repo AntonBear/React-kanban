@@ -1,5 +1,5 @@
 import './App.css'
-import Header from './components/Header/Header/Header'
+import Header from './components/Header/Header'
 import Main from './components/Main/Main'
 import PopBrowse from './components/PopBrowse/PopBrowse'
 import PopExit from './components/PopExit/PopExit'
@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(true)
-    }, 2000)
+    }, 0)
   }, [])
 
   const handleCardAdd = () => {
@@ -52,7 +52,7 @@ function App() {
           <Routes>
             <Route path="/exit" element={<PopExit />} />
             <Route path="/new-card" element={<PopNewCard />} />
-            <Route path="/browse" element={<PopBrowse />} />
+            <Route path="/pop-browse" element={<PopBrowse />} />
             <Route
               path="/"
               element={

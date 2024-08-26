@@ -1,6 +1,6 @@
 import React from 'react'
 import Column from './Column'
-import { Container } from '../Header/Header/Header.styled'
+import { Container } from '../Header/Header.styled'
 import { Main_container, Main__content, Main_block } from './Main.styled'
 
 function Main({ cards, theme }) {

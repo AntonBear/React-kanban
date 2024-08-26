@@ -1,5 +1,5 @@
 import React from 'react'
-import UserSetTarget from '../UserSetTarget/UserSetTarget'
+import UserSetTarget from './UserSetTarget/UserSetTarget'
 import {
   Header__block,
   Header__nav,
@@ -16,9 +16,9 @@ function Header({ handleCardAdd, toggleTheme, theme }) {
         <Container>
           <Header__block>
             <div className="header__logo _show _light">
-              <a href="" target="_self">
+              <Link to="/">
                 <img src="images/logo.png" alt="logo" />
-              </a>
+              </Link>
             </div>
             <div className="header__logo _dark">
               <a href="" target="_self">

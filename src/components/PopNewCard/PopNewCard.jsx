@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { StyledLink } from './PopNewCard.styled'
 
 function PopNewCard() {
   return (
@@ -8,8 +8,7 @@ function PopNewCard() {
         <div className="pop-new-card__block">
           <div className="pop-new-card__content">
             <h3 className="pop-new-card__ttl">Создание задачи</h3>
-            <Link to="/">&#10006;</Link>
-            <a href="#" className="pop-new-card__close">&#10006;</a>
+            <StyledLink to="/">&#10006;</StyledLink>
             <div className="pop-new-card__wrap">
               <form
                 className="pop-new-card__form form-new"
