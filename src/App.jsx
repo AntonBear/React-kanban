@@ -49,20 +49,28 @@ function App() {
     <>
       <ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
         <Wrapper>
-          <PopExit />
-          <PopNewCard />
-          <PopExit />
-          <PopBrowse />
-          <Header
-            theme={theme}
-            toggleTheme={toggleTheme}
-            handleCardAdd={handleCardAdd}
-          />
-          {isLoading ? (
-            <Main cards={cards} theme={theme} />
-          ) : (
-            <div>Идёт загрузка...</div>
-          )}
+          <Routes>
+            <Route path="/exit" element={<PopExit />} />
+            <Route path="/new-card" element={<PopNewCard />} />
+            <Route path="/browse" element={<PopBrowse />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Header
+                    theme={theme}
+                    toggleTheme={toggleTheme}
+                    handleCardAdd={handleCardAdd}
+                  />
+                  {isLoading ? (
+                    <Main cards={cards} theme={theme} />
+                  ) : (
+                    <div>Идёт загрузка...</div>
+                  )}
+                </>
+              }
+            />
+          </Routes>
         </Wrapper>
       </ThemeProvider>
     </>
